@@ -41,8 +41,8 @@ def axes0_pos0(name, rs):
   Parameters
   ----------
   name : str
-    lattice name, must be one of ['tri', 'hex', 'kag'], which stand for
-     ['triangular', 'hexagonal', 'kagome'], respectively.
+    lattice name, must be one of ['tri', 'hon', 'kag'], which stand for
+     ['triangular', 'honecomb', 'kagome'], respectively.
   rs : float
     Wigner-Seitz density parameter
 
@@ -55,7 +55,7 @@ def axes0_pos0(name, rs):
   """
   upos_map = {
     'tri': np.array([[0.0, 0.0]]),
-    'hex': np.array([[0.0, 0.0], [1./3, 1./3]]),
+    'hon': np.array([[0.0, 0.0], [1./3, 1./3]]),
     'kag': np.array([[0.0, 0.0], [0.5, 0], [0, 0.5]])
   }
   if name not in upos_map:
